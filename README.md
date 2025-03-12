@@ -21,7 +21,7 @@ Tecnologías más usadas en la App.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/html5.png" alt=html5 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/css3.png" alt=css3 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/js.png" alt=javascript width="60" height="60"/>
-  <img style="margin: auto;" src="https://w7.pngwing.com/pngs/957/449/png-transparent-vuejs-logos-and-brands-line-filled-icon-thumbnail.png" alt=vue3js width="60" height="60"/>
+  <img style="margin: auto;" src="https://e7.pngegg.com/pngimages/186/153/png-clipart-vue-js-javascript-framework-graphql-software-framework-t-v-angle-triangle-thumbnail.png" alt=vue3js width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/express.png" alt=express width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/node.png" alt=nodejs width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/npm.png" alt=npm width="60" height="60"/>
