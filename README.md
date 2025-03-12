@@ -1,8 +1,5 @@
 
-# GuitarLA
-Independent Sr. Software Consultant | Community Speaker | Co-Founder @ [TheYouthProject](https://github.com/TheYouthProject) | Embracing Technology | Creating Experiences
-
-## 🧐 A cerca del proyecto
+# 🧐 A cerca del proyecto - GuitarLA
 Desarrollo de una WebApp para usuarios que desen comprar guitarras de todo tipo de marcas. El comportamiendo será similar al de un pequeño eCommerce.
 
 ## 💻 Descripción
