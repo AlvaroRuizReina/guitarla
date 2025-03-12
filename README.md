@@ -1,10 +1,12 @@
-# Vue 3 + Vite - GuitarLA
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# GuitarLA
+Independent Sr. Software Consultant | Community Speaker | Co-Founder @ [TheYouthProject](https://github.com/TheYouthProject) | Embracing Technology | Creating Experiences
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## 🧐 A cerca del proyecto
+Desarrollo de una WebApp para usuarios que desen comprar guitarras de todo tipo de marcas. El comportamiendo será similar al de un pequeño eCommerce.
 
-Proyecto en el cual desarrollamos WebApp, para que nuestros usuario puedan comprar guitarras de todo tipo. Incluye las siguientes funcionalidades y partes de la App.
+## 💻 Descripción
+Descripción a cerca de la infraestructura de la App.
   * Header
       - NavBar
       - Carro de comprar actualizable con los precios de los productos a comprar.
@@ -16,10 +18,23 @@ Proyecto en el cual desarrollamos WebApp, para que nuestros usuario puedan compr
   * Footer
       - Información adicional para el cliente
 
-# Lenguajes empleados
-Los lenguajes empleados han sido los siguientes:
-  * HTML5
-  * CSS con TailwindCSS
-  * JS
-  * Vue3JS
-  * Git + GitHub ( Controlador de viersiones )
+## ⚡Tecnologías
+Tecnologías más usadas en la App.
+<p align="left">
+	 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/html5.png" alt=html5 width="60" height="60"/> 
+	 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/css3.png" alt=css3 width="60" height="60"/> 
+  <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/js.png" alt=javascript width="60" height="60"/>
+	 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/mongo.png" alt=mongodb width="60" height="60"/>
+  <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/express.png" alt=express width="60" height="60"/>
+  <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/node.png" alt=nodejs width="60" height="60"/>
+  <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/npm.png" alt=npm width="60" height="60"/>
+	 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="60" height="60"/>
+  <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="60" height="60"/>
+</p>
+
+## 📫 Contact Me
+- Twitter - [@gauravc12](https://twitter.com/gauravc12)
+- LinkedIn - [Gaurav Chouhan](https://in.linkedin.com/in/gauravc12)
+- Blog - [GC Codes](https://gc-codes.com)
+
+---
