@@ -1,4 +1,3 @@
-
 # 🧐 A cerca del proyecto - GuitarLA
 Desarrollo de una WebApp para usuarios que desen comprar guitarras de todo tipo de marcas. El comportamiendo será similar al de un pequeño eCommerce.
 
@@ -14,6 +13,8 @@ Descripción a cerca de la infraestructura de la App.
       - Imágenes
   * Footer
       - Información adicional para el cliente
+      - Redes sociales
+      - Copyright
 
 ## ⚡Tecnologías
 Tecnologías más usadas en la App.
@@ -36,6 +37,6 @@ Las herramientas, programas y S.O usados en el proyecto.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="60" height="60"/>
 </p>
 
-## 📫 Contactame
-- LinkedIn - [Gaurav Chouhan](https://in.linkedin.com/in/gauravc12)
+📫 Contactame
+- LinkedIn - [Álvaro Ruiz Reina](https://www.linkedin.com/in/álvaro-ruiz-reina-316834147/)
 ---
