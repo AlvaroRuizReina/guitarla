@@ -23,7 +23,7 @@ Tecnologías más usadas en la App.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/css3.png" alt=css3 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/js.png" alt=javascript width="60" height="60"/>
   <img style="margin: auto;" src="https://static-00.iconduck.com/assets.00/vue-icon-2048x2048-ttu9fp8c.png" alt=vue3js width="60" height="60"/>
- <img style="margin: auto;" src="https://play-lh.googleusercontent.com/YN4OEsoWsU1QrZFcwWlI8uuGhDKc4RAlP56FFyL03VFegD5tWjZ5cNWHocC_QRE_TvA" alt=vue3js width="60" height="60"/>
+ <img style="margin: auto;" src="/public/img/tailwindcss.svg" alt=vue3js width="60" height="60"/>
 </p>
 
 ## 🖥️ Herramientas de escritorio
