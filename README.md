@@ -42,7 +42,7 @@ Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
 <p align="left">1. Acceder al repo de GitHub.</p>
-<p align="left">2. Copiar la url del proyecto con los protocolos https o ssh./p>
+<p align="left">2. Copiar la url del proyecto con los protocolos https o ssh.</p>
 <p align="left">3. Abrir una terminal y posicionarnos sobre el directorio donde almacenaremos el repo del proyecto.</p>
 <p align="left">4. Descargar nuestro repo en local con Git.</p>
 <pre style="border-radius: 20px">
