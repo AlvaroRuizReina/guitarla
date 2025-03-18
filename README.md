@@ -44,9 +44,7 @@ Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
 <pre style="border-radius: 20px">
   <code>
    1. Acceder al repo de GitHub
-   
    2. Copiar la url del proyecto con los protocolos https o ssh
-      
    3. Abrir una terminal y posicionarnos sobre el directorio donde 
       almacenaremos el repo del proyecto
       Comando: cd "relative_path"
