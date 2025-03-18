@@ -40,7 +40,6 @@ Las herramientas, programas y S.O usados en el proyecto.
 ## Descargar e instalar proyecto
 Pasos a seguir para poder descargar el repo e inicializarlo en local.
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
-
 <pre>
   <code style="border-radius: 20px">
     1. Abrir una terminal y posicionarnos sobre el repositorio
