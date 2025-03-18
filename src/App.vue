@@ -87,6 +87,11 @@ onMounted(() => {
             <Guitarra 
                 v-for="guitarra in guitarras"
                 :guitarra="guitarra"
+                name="Luka"
+                img="./img/guitarra_01.jpg"
+                description="Hola como estas"
+                price="300"
+                currency="€"
             />
         </div>
     </main> <!-- FIN MAIN -->
