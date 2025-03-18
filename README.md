@@ -22,8 +22,8 @@ Tecnologías más usadas en la App.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/html5.png" alt=html5 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/css3.png" alt=css3 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/js.png" alt=javascript width="60" height="60"/>
-  <img style="margin: auto;" src="/public/img/vue.svg" alt=vue3js width="60" height="60"/>
- <img style="margin: auto;" src="/public/img/tailwindcss.svg" alt=vue3js width="60" height="60"/>
+  <img style="margin: auto;" src="/public/vue.svg" alt=vue3js width="60" height="60"/>
+ <img style="margin: auto;" src="/public/bootstrap.svg" alt=bootstrap width="60" height="60"/>
 </p>
 
 ## 🖥️ Herramientas de escritorio
@@ -35,6 +35,7 @@ Las herramientas, programas y S.O usados en el proyecto.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/npm.png" alt=npm width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="60" height="60"/>
+  <img style="margin: auto;" src="/public/vite.svg" alt=vite width="60" height="60"/>
 </p>
 
 📫 Contactame
