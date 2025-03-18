@@ -37,15 +37,24 @@ Las herramientas, programas y S.O usados en el proyecto.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="60" height="60"/>
 </p>
 
-## Descargar e instalar proyecto
-Pasos a seguir para poder descargar el repo e inicializarlo en local.
+## 🪧 Descargar e instalar proyecto
+Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
-<pre>
-  <code style="border-radius: 20px">
-    1. Abrir una terminal y posicionarnos sobre el repositorio
-       cd "relative_path"
+<pre style="border-radius: 20px">
+  <code>
+    1. Acceder al repo de GitHub
+    2. Copiar la url del proyecto con los protocolos https o ssh
+    3. Abrir una terminal y posicionarnos sobre el directorio donde 
+       almacenaremos el repo del proyecto
+       Comando: cd "relative_path"
    
-    2. Instalar las dependencias del proyecto ( Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.)
+    4. Descargar nuestro repo en local con Git
+       Comando: git clone https://proyect_url
+       Comando: git clone ssh://proyect_url
+   
+    2. Instalar las dependencias del proyecto.
+       Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.
        npm i
        npm install
 
