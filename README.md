@@ -44,7 +44,9 @@ Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
 <pre style="border-radius: 20px">
   <code>
    1. Acceder al repo de GitHub
+   
    2. Copiar la url del proyecto con los protocolos https o ssh
+      
    3. Abrir una terminal y posicionarnos sobre el directorio donde 
       almacenaremos el repo del proyecto
       Comando: cd "relative_path"
@@ -53,12 +55,12 @@ Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
        Comando: git clone https://proyect_url
        Comando: git clone ssh://proyect_url
    
-    2. Instalar las dependencias del proyecto.
+    5. Instalar las dependencias del proyecto.
        Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.
        npm i
        npm install
 
-    3. Levantar el proyecto en local
+    6. Levantar el proyecto en local
        npm run dev
   </code>
 </pre>
