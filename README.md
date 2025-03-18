@@ -41,25 +41,25 @@ Las herramientas, programas y S.O usados en el proyecto.
 Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+<p align="left">1. Acceder al repo de GitHub.</p>
+<p align="left">2. Copiar la url del proyecto con los protocolos https o ssh./p>
+<p align="left">3. Abrir una terminal y posicionarnos sobre el directorio donde almacenaremos el repo del proyecto.</p>
+<p align="left">4. Descargar nuestro repo en local con Git.</p>
 <pre style="border-radius: 20px">
   <code>
-   1. Acceder al repo de GitHub
-   2. Copiar la url del proyecto con los protocolos https o ssh
-   3. Abrir una terminal y posicionarnos sobre el directorio donde 
-      almacenaremos el repo del proyecto
-      Comando: cd "relative_path"
-   
-    4. Descargar nuestro repo en local con Git
-       Comando: git clone https://proyect_url
-       Comando: git clone ssh://proyect_url
-   
-    5. Instalar las dependencias del proyecto.
-       Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.
-       npm i
-       npm install
-
-    6. Levantar el proyecto en local
-       npm run dev
+     git clone https://proyect_url o git clone ssh://proyect_url
+  </code>
+</pre>
+<p align="left">5. Instalar las dependencias del proyecto.</p>
+<pre style="border-radius: 20px">
+  <code>
+     npm install o npm i
+  </code>
+</pre>
+<p align="left">6. Lavantar proyecto en local.</p>
+<pre style="border-radius: 20px">
+  <code>
+     npm run dev
   </code>
 </pre>
 
