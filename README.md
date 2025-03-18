@@ -39,19 +39,17 @@ Las herramientas, programas y S.O usados en el proyecto.
 
 ## Descargar e instalar proyecto
 Pasos a seguir para poder descargar el repo e inicializarlo en local.
-<script src="https://cdn.jsdelivr.net/npm/prismjs"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
-<script type="module">Prism.highlightAll();</script>
 
 <pre>
   <code>
     1. Abrir una terminal y posicionarnos sobre el repositorio
     2. Instalar las dependencias del proyecto ( Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.)
-    npm i
-    npm install
+       npm i
+       npm install
 
     3. Levantar el proyecto en local
-    npm run dev
+       npm run dev
   </code>
 </pre>
 
