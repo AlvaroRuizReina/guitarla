@@ -1,5 +1,10 @@
 <script setup>
-    
+    defineProps({
+        carrito: {
+            type: Array,
+            required: true
+        }
+    })
 </script>
 <template>
     <!-- HEADER -->
@@ -15,8 +20,10 @@
                     <div class="carrito">
                         <img class="img-fluid" src="/img/carrito.png" alt="imagen carrito" />
                         <div id="carrito" class="bg-white p-3">
-                            <p class="text-center m-0">El carrito esta vacio</p>
-                            <div>
+                            <p v-if="carrito.length === 0" class="text-center m-0">
+                                El carrito esta vacio
+                            </p>
+                            <div v-else>
                                 <table class="w-100 table">
                                     <thead>
                                         <tr>
