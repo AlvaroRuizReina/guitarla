@@ -22,8 +22,8 @@ Tecnologías más usadas en la App.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/html5.png" alt=html5 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/css3.png" alt=css3 width="60" height="60"/> 
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/js.png" alt=javascript width="60" height="60"/>
-  <img style="margin: auto;" src="/public/img/vue.svg" alt=vue3js width="60" height="60"/>
- <img style="margin: auto;" src="/public/img/tailwindcss.svg" alt=vue3js width="60" height="60"/>
+  <img style="margin: auto;" src="/public/vue.svg" alt=vue3js width="60" height="60"/>
+ <img style="margin: auto;" src="/public/bootstrap.svg" alt=bootstrap width="60" height="60"/>
 </p>
 
 ## 🖥️ Herramientas de escritorio
@@ -35,22 +35,32 @@ Las herramientas, programas y S.O usados en el proyecto.
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/npm.png" alt=npm width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="60" height="60"/>
   <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="60" height="60"/>
+  <img style="margin: auto;" src="/public/vite.svg" alt=vite width="60" height="60"/>
 </p>
 
-## Descargar e instalar proyecto
-Pasos a seguir para poder descargar el repo e inicializarlo en local.
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
-<pre>
-  <code style="border-radius: 20px">
-    1. Abrir una terminal y posicionarnos sobre el repositorio
-       cd "relative_path"
-   
-    2. Instalar las dependencias del proyecto ( Usar el gestior de dependencias de nuestra elección, NPM, PNPM, BUM, etc.)
-       npm i
-       npm install
+## 🪧 Descargar e instalar proyecto
+Pasos a seguir para poder descargar e inicializar nuestro proyecto en local.
 
-    3. Levantar el proyecto en local
-       npm run dev
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-dracula.min.css">
+<p align="left">1. Acceder al repo de GitHub.</p>
+<p align="left">2. Copiar la url del proyecto con los protocolos https o ssh.</p>
+<p align="left">3. Abrir una nueva terminal y posicionarnos sobre el directorio donde almacenaremos el repo del proyecto.</p>
+<p align="left">4. Descargar nuestro repo en local con Git.</p>
+<pre style="border-radius: 20px">
+  <code>
+     git clone https://proyect_url o git clone ssh://proyect_url
+  </code>
+</pre>
+<p align="left">5. Instalar las dependencias del proyecto.</p>
+<pre style="border-radius: 20px">
+  <code>
+     npm install o npm i
+  </code>
+</pre>
+<p align="left">6. Lavantar proyecto en local.</p>
+<pre style="border-radius: 20px">
+  <code>
+     npm run dev
   </code>
 </pre>
 
