@@ -6,6 +6,9 @@
             required: true
         }
     })
+
+    // Declarar Component Event
+    defineEmits(['agregar-carrito'])
 </script>
 
 <template>
@@ -21,7 +24,11 @@
             <h3 class="text-black fs-4 fw-bold text-uppercase">{{guitarra.nombre}}</h3>
             <p>{{guitarra.descripcion}}</p>
             <p class="fw-black text-primary fs-3">{{guitarra.precio}} {{guitarra.currency}}</p>
-            <button type="button" class="btn btn-dark w-100 ">Agregar al Carrito</button>
+            <button 
+                type="button"
+                @click="$emit('agregar-carrito', guitarra)"
+                class="btn btn-dark w-100 ">Agregar al carrito
+            </button>
         </div>
     </div><!-- FIN GUITARRA -->
 </template>
