@@ -8,11 +8,13 @@ import Footer from './components/Footer.vue';
 
 // states de nuestra App con ref
 const guitarras = ref([])
+const guitarra = ref({})
 const carrito = ref([])
 
 // lifecycle hook onMounted
 onMounted(() => {
     guitarras.value = db
+    guitarra.value = db[3]
 })
 
 /**
@@ -20,7 +22,7 @@ onMounted(() => {
  * Evita registros duplicados en el carrito de compra
  * @param guitarra
  */
-const agregarCarrito = (guitarra) => {
+const agregarCarrito = guitarra => {
     const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
     if (existeCarrito >= 0) {
         carrito.value[existeCarrito].cantidad++
@@ -30,22 +32,36 @@ const agregarCarrito = (guitarra) => {
     }
 }
 
-// Method Event "incrementarCantidad"
-const incrementarCantidad = (id) => {
-    console.log(id)
+/**
+ * Method Event "incrementarCantidad"
+ * Incrementa la cantidad de elementos añadir al carrito de compra
+ * @param id
+ */
+const incrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad >= 10) return
+    carrito.value[index].cantidad++
 }
 
-// Method Event "decrementarCantidad"
-const decrementarCantidad = (id) => {
-    console.log(id)
+/**
+ * Method Event "decrementarCantidad"
+ * Reduce la cantidad de elementos añadir al carrito de compra
+ * @param id
+ */
+const decrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad <= 1) return
+    carrito.value[index].cantidad--
 }
 </script>
 
 <template>
     <Header 
-        :carrito="carrito" 
+        :carrito="carrito"
+        :guitarra="guitarra"
         @incrementar-cantidad="incrementarCantidad"
         @decrementar-cantidad="decrementarCantidad"
+        @agregar-carrito="agregarCarrito"
     />
         <!-- MAIN -->
         <main class="container-xl mt-5">

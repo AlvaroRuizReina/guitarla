@@ -1,6 +1,6 @@
 <script setup>
     // Definir las props del componente
-    defineProps({
+    const props = defineProps({
         guitarra: {
             type: Object,
             required: true

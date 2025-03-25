@@ -1,15 +1,33 @@
 <script setup>
-    defineProps({
+import { computed } from 'vue'; 
+
+    const props = defineProps({
         carrito: {
             type: Array,
             required: true
-        }
+        },
+        guitarra: {
+            type: Object,
+            required: true
+        },
     })
 
     defineEmits([
         'incrementar-cantidad', 
-        'decrementar-cantidad'
+        'decrementar-cantidad',
+        'agregar-carrito'
     ])
+
+    /**
+     * Computed property "totalPagar"
+     * Permite calcular el precio total de los productos añadidos al carrito de compra.
+     * @argument total
+     * @argument producto
+     */
+    const totalPagar = computed(() => {
+        return props.carrito.reduce((total, producto) => total + 
+        (producto.cantidad * producto.precio), 0)
+    })
 </script>
 <template>
     <!-- HEADER -->
@@ -70,20 +88,25 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="text-end">Total pagar: <span class="fw-bold">$899</span></p>
+                                <p class="text-end">Total pagar: 
+                                    <span class="fw-bold">{{totalPagar}}</span>
+                                </p>
                                 <button class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
                             </div>
                         </div>
                     </div>
                 </nav>
             </div><!--.row-->
-
             <div class="row mt-5">
                 <div class="col-md-6 text-center text-md-start pt-5">
-                    <h1 class="display-2 fw-bold">Modelo VAI</h1>
-                    <p class="mt-5 fs-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, possimus quibusdam dolor nemo velit quo, fuga omnis, iure molestias optio tempore sint at ipsa dolorum odio exercitationem eos inventore odit.</p>
-                    <p class="text-primary fs-1 fw-black">299 €</p>
-                    <button type="button"class="btn fs-4 bg-primary text-white py-2 px-5">Agregar al Carrito</button>
+                    <h1 class="display-2 fw-bold">Modelo {{guitarra.nombre}}</h1>
+                    <p class="mt-5 fs-5 text-white">{{guitarra.descripcion}}</p>
+                    <p class="text-primary fs-1 fw-black">{{guitarra.precio}} {{guitarra.currency}}</p>
+                    <button type="button" 
+                        class="btn fs-4 bg-primary text-white py-2 px-5"
+                        @click="$emit('agregar-carrito', guitarra)"
+                        >Agregar al Carrito
+                    </button>
                 </div>
             </div>
         </div>
