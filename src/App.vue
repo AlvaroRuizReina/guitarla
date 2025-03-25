@@ -15,7 +15,11 @@ onMounted(() => {
     guitarras.value = db
 })
 
-// Method Event "agregarCarrito"
+/**
+ * Method Event "agregarCarrito"
+ * Evita registros duplicados en el carrito de compra
+ * @param guitarra
+ */
 const agregarCarrito = (guitarra) => {
     const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
     if (existeCarrito >= 0) {
@@ -25,10 +29,24 @@ const agregarCarrito = (guitarra) => {
         carrito.value.push(guitarra)
     }
 }
+
+// Method Event "incrementarCantidad"
+const incrementarCantidad = (id) => {
+    console.log(id)
+}
+
+// Method Event "decrementarCantidad"
+const decrementarCantidad = (id) => {
+    console.log(id)
+}
 </script>
 
 <template>
-    <Header :carrito="carrito" />
+    <Header 
+        :carrito="carrito" 
+        @incrementar-cantidad="incrementarCantidad"
+        @decrementar-cantidad="decrementarCantidad"
+    />
         <!-- MAIN -->
         <main class="container-xl mt-5">
             <h2 class="text-center">Nuestra Colección</h2>
