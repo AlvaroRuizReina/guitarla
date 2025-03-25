@@ -8,11 +8,13 @@ import Footer from './components/Footer.vue';
 
 // states de nuestra App con ref
 const guitarras = ref([])
+const guitarra = ref({})
 const carrito = ref([])
 
 // lifecycle hook onMounted
 onMounted(() => {
     guitarras.value = db
+    guitarra.value = db[3]
 })
 
 /**
@@ -30,27 +32,36 @@ const agregarCarrito = guitarra => {
     }
 }
 
-// Method Event "incrementarCantidad"
+/**
+ * Method Event "incrementarCantidad"
+ * Incrementa la cantidad de elementos añadir al carrito
+ * @param id
+ */
 const incrementarCantidad = id => {
     const index = carrito.value.findIndex(producto => producto.id === id)
     if(carrito.value[index].cantidad >= 10) return
     carrito.value[index].cantidad++
 }
 
-// Method Event "decrementarCantidad"
+/**
+ * Method Event "decrementarCantidad"
+ * Reduce la cantidad de elementos añadir al carrito
+ * @param id
+ */
 const decrementarCantidad = id => {
     const index = carrito.value.findIndex(producto => producto.id === id)
     if(carrito.value[index].cantidad <= 1) return
     carrito.value[index].cantidad--
 }
-
 </script>
 
 <template>
     <Header 
-        :carrito="carrito" 
+        :carrito="carrito"
+        :guitarra="guitarra"
         @incrementar-cantidad="incrementarCantidad"
         @decrementar-cantidad="decrementarCantidad"
+        @agregar-carrito="agregarCarrito"
     />
         <!-- MAIN -->
         <main class="container-xl mt-5">
