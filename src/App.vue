@@ -31,15 +31,14 @@ const agregarCarrito = (guitarra) => {
 }
 
 // Method Event "incrementarCantidad"
-const incrementarCantidad = () => {
-    console.log('Más cantidad...')
+const incrementarCantidad = (id) => {
+    console.log(id)
 }
 
 // Method Event "decrementarCantidad"
-const decrementarCantidad = () => {
-    console.log('Menos cantidad...')
+const decrementarCantidad = (id) => {
+    console.log(id)
 }
-
 </script>
 
 <template>
