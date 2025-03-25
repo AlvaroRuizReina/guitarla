@@ -20,7 +20,7 @@ onMounted(() => {
  * Evita registros duplicados en el carrito de compra
  * @param guitarra
  */
-const agregarCarrito = (guitarra) => {
+const agregarCarrito = guitarra => {
     const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
     if (existeCarrito >= 0) {
         carrito.value[existeCarrito].cantidad++
@@ -31,14 +31,19 @@ const agregarCarrito = (guitarra) => {
 }
 
 // Method Event "incrementarCantidad"
-const incrementarCantidad = (id) => {
-    console.log(id)
+const incrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad >= 10) return
+    carrito.value[index].cantidad++
 }
 
 // Method Event "decrementarCantidad"
-const decrementarCantidad = (id) => {
-    console.log(id)
+const decrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad <= 1) return
+    carrito.value[index].cantidad--
 }
+
 </script>
 
 <template>
