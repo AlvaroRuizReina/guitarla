@@ -34,7 +34,7 @@ const agregarCarrito = guitarra => {
 
 /**
  * Method Event "incrementarCantidad"
- * Incrementa la cantidad de elementos añadir al carrito
+ * Incrementa la cantidad de elementos añadir al carrito de compra
  * @param id
  */
 const incrementarCantidad = id => {
@@ -45,7 +45,7 @@ const incrementarCantidad = id => {
 
 /**
  * Method Event "decrementarCantidad"
- * Reduce la cantidad de elementos añadir al carrito
+ * Reduce la cantidad de elementos añadir al carrito de compra
  * @param id
  */
 const decrementarCantidad = id => {

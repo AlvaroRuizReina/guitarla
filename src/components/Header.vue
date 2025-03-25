@@ -1,7 +1,7 @@
 <script setup>
-import Guitarra from './Guitarra.vue';
+import { computed } from 'vue'; 
 
-    defineProps({
+    const props = defineProps({
         carrito: {
             type: Array,
             required: true
@@ -17,6 +17,17 @@ import Guitarra from './Guitarra.vue';
         'decrementar-cantidad',
         'agregar-carrito'
     ])
+
+    /**
+     * Computed property "totalPagar"
+     * Permite calcular el precio total de los productos añadidos al carrito de compra.
+     * @argument total
+     * @argument producto
+     */
+    const totalPagar = computed(() => {
+        return props.carrito.reduce((total, producto) => total + 
+        (producto.cantidad * producto.precio), 0)
+    })
 </script>
 <template>
     <!-- HEADER -->
@@ -77,7 +88,9 @@ import Guitarra from './Guitarra.vue';
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="text-end">Total pagar: <span class="fw-bold">$899</span></p>
+                                <p class="text-end">Total pagar: 
+                                    <span class="fw-bold">{{totalPagar}}</span>
+                                </p>
                                 <button class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
                             </div>
                         </div>
