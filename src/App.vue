@@ -15,7 +15,34 @@ const carrito = ref([])
 onMounted(() => {
     guitarras.value = db
     guitarra.value = db[3]
+    
+    const carritoStorage = localStorage.getItem('carrito')
+    if (carritoStorage) return carrito.value = JSON.parse(carritoStorage)
 })
+
+/*
+* local storage callback funtion
+* Almacena de forma persistente los productos en el carrito de compra
+*/
+const guardarLocalStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito.value))
+}
+
+/**
+ * Computed Event "agregarCarrito"
+ * Evita registros duplicados en el carrito de compra
+ * @param guitarra
+ */
+const agregarCarrito = guitarra => {
+    const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
+    if (existeCarrito >= 0) {
+        carrito.value[existeCarrito].cantidad++
+    } else {
+        guitarra.cantidad = 1
+        carrito.value.push(guitarra)
+    }
+    guardarLocalStorage()
+}
 
 /**
  * Computed Event "incrementarCantidad"
@@ -44,33 +71,7 @@ const decrementarCantidad = id => {
 }
 
 /**
- * Computed Event "vaciarCarrito"
- * vaciar carrito de compra
- * @param id
- * @argument id
- * @argument producto
- */
-const vaciarCarrito = () => {
-    carrito.value = []
-}
-
-/**
- * Method Event "agregarCarrito"
- * Evita registros duplicados en el carrito de compra
- * @param guitarra
- */
-const agregarCarrito = guitarra => {
-    const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
-    if (existeCarrito >= 0) {
-        carrito.value[existeCarrito].cantidad++
-    } else {
-        guitarra.cantidad = 1
-        carrito.value.push(guitarra)
-    }
-}
-
-/**
- * Method Event "elimiarProducto"
+ * Computed Event "elimiarProducto"
  * Elimina un producto individual del carrito de compra
  * @param id
  * @argument id
@@ -78,6 +79,14 @@ const agregarCarrito = guitarra => {
  */
 const elimiarProducto = id => {
     carrito.value = carrito.value.filter(producto => producto.id != id)
+}
+
+/*
+* Computed Event "vaciarCarrito"
+* vaciar carrito de compra por completo
+*/
+const vaciarCarrito = () => {
+    carrito.value = []
 }
 </script>
 
