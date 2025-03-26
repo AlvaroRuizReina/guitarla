@@ -15,7 +15,9 @@ import { computed } from 'vue';
     defineEmits([
         'incrementar-cantidad', 
         'decrementar-cantidad',
-        'agregar-carrito'
+        'agregar-carrito',
+        'eliminar-producto',
+        'vaciar-carrito'
     ])
 
     /**
@@ -81,9 +83,10 @@ import { computed } from 'vue';
                                                 >+</button>
                                             </td>
                                             <td>
-                                                <button class="btn btn-danger" type="button">
-                                                    X
-                                                </button>
+                                                <button class="btn btn-danger" 
+                                                type="button"
+                                                @click="$emit('eliminar-producto', producto.id)"
+                                                >X</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -91,7 +94,9 @@ import { computed } from 'vue';
                                 <p class="text-end">Total pagar: 
                                     <span class="fw-bold">{{totalPagar}}</span>
                                 </p>
-                                <button class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
+                                <button class="btn btn-dark w-100 mt-3 p-2"
+                                @click="$emit('vaciar-carrito')"
+                                >Vaciar Carrito</button>
                             </div>
                         </div>
                     </div>

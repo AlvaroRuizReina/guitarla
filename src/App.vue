@@ -15,10 +15,21 @@ const carrito = ref([])
 onMounted(() => {
     guitarras.value = db
     guitarra.value = db[3]
+    
+    const carritoStorage = localStorage.getItem('carrito')
+    if (carritoStorage) return carrito.value = JSON.parse(carritoStorage)
 })
 
+/*
+* local storage callback funtion
+* Almacena de forma persistente los productos en el carrito de compra
+*/
+const guardarLocalStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito.value))
+}
+
 /**
- * Method Event "agregarCarrito"
+ * Computed Event "agregarCarrito"
  * Evita registros duplicados en el carrito de compra
  * @param guitarra
  */
@@ -30,12 +41,15 @@ const agregarCarrito = guitarra => {
         guitarra.cantidad = 1
         carrito.value.push(guitarra)
     }
+    guardarLocalStorage()
 }
 
 /**
- * Method Event "incrementarCantidad"
+ * Computed Event "incrementarCantidad"
  * Incrementa la cantidad de elementos añadir al carrito de compra
  * @param id
+ * @argument id
+ * @argument producto
  */
 const incrementarCantidad = id => {
     const index = carrito.value.findIndex(producto => producto.id === id)
@@ -44,14 +58,35 @@ const incrementarCantidad = id => {
 }
 
 /**
- * Method Event "decrementarCantidad"
+ * Computed Event "decrementarCantidad"
  * Reduce la cantidad de elementos añadir al carrito de compra
  * @param id
+ * @argument id
+ * @argument producto
  */
 const decrementarCantidad = id => {
     const index = carrito.value.findIndex(producto => producto.id === id)
     if(carrito.value[index].cantidad <= 1) return
     carrito.value[index].cantidad--
+}
+
+/**
+ * Computed Event "elimiarProducto"
+ * Elimina un producto individual del carrito de compra
+ * @param id
+ * @argument id
+ * @argument producto
+ */
+const elimiarProducto = id => {
+    carrito.value = carrito.value.filter(producto => producto.id != id)
+}
+
+/*
+* Computed Event "vaciarCarrito"
+* vaciar carrito de compra por completo
+*/
+const vaciarCarrito = () => {
+    carrito.value = []
 }
 </script>
 
@@ -62,6 +97,8 @@ const decrementarCantidad = id => {
         @incrementar-cantidad="incrementarCantidad"
         @decrementar-cantidad="decrementarCantidad"
         @agregar-carrito="agregarCarrito"
+        @eliminar-producto="elimiarProducto"
+        @vaciar-carrito="vaciarCarrito"
     />
         <!-- MAIN -->
         <main class="container-xl mt-5">
