@@ -18,6 +18,32 @@ onMounted(() => {
 })
 
 /**
+ * Computed Event "incrementarCantidad"
+ * Incrementa la cantidad de elementos añadir al carrito de compra
+ * @param id
+ * @argument id
+ * @argument producto
+ */
+const incrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad >= 10) return
+    carrito.value[index].cantidad++
+}
+
+/**
+ * Computed Event "decrementarCantidad"
+ * Reduce la cantidad de elementos añadir al carrito de compra
+ * @param id
+ * @argument id
+ * @argument producto
+ */
+const decrementarCantidad = id => {
+    const index = carrito.value.findIndex(producto => producto.id === id)
+    if(carrito.value[index].cantidad <= 1) return
+    carrito.value[index].cantidad--
+}
+
+/**
  * Method Event "agregarCarrito"
  * Evita registros duplicados en el carrito de compra
  * @param guitarra
@@ -33,25 +59,13 @@ const agregarCarrito = guitarra => {
 }
 
 /**
- * Method Event "incrementarCantidad"
- * Incrementa la cantidad de elementos añadir al carrito de compra
+ * 
  * @param id
+ * @argument id
+ * @argument producto
  */
-const incrementarCantidad = id => {
-    const index = carrito.value.findIndex(producto => producto.id === id)
-    if(carrito.value[index].cantidad >= 10) return
-    carrito.value[index].cantidad++
-}
-
-/**
- * Method Event "decrementarCantidad"
- * Reduce la cantidad de elementos añadir al carrito de compra
- * @param id
- */
-const decrementarCantidad = id => {
-    const index = carrito.value.findIndex(producto => producto.id === id)
-    if(carrito.value[index].cantidad <= 1) return
-    carrito.value[index].cantidad--
+const elimiarProducto = id => {
+    carrito.value = carrito.value.filter(producto => producto.id != id)
 }
 </script>
 
@@ -62,6 +76,7 @@ const decrementarCantidad = id => {
         @incrementar-cantidad="incrementarCantidad"
         @decrementar-cantidad="decrementarCantidad"
         @agregar-carrito="agregarCarrito"
+        @eliminar-producto="elimiarProducto"
     />
         <!-- MAIN -->
         <main class="container-xl mt-5">
