@@ -44,6 +44,17 @@ const decrementarCantidad = id => {
 }
 
 /**
+ * Computed Event "vaciarCarrito"
+ * vaciar carrito de compra
+ * @param id
+ * @argument id
+ * @argument producto
+ */
+const vaciarCarrito = () => {
+    carrito.value = []
+}
+
+/**
  * Method Event "agregarCarrito"
  * Evita registros duplicados en el carrito de compra
  * @param guitarra
@@ -59,7 +70,8 @@ const agregarCarrito = guitarra => {
 }
 
 /**
- * 
+ * Method Event "elimiarProducto"
+ * Elimina un producto individual del carrito de compra
  * @param id
  * @argument id
  * @argument producto
@@ -77,6 +89,7 @@ const elimiarProducto = id => {
         @decrementar-cantidad="decrementarCantidad"
         @agregar-carrito="agregarCarrito"
         @eliminar-producto="elimiarProducto"
+        @vaciar-carrito="vaciarCarrito"
     />
         <!-- MAIN -->
         <main class="container-xl mt-5">

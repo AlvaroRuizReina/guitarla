@@ -16,7 +16,8 @@ import { computed } from 'vue';
         'incrementar-cantidad', 
         'decrementar-cantidad',
         'agregar-carrito',
-        'eliminar-producto'
+        'eliminar-producto',
+        'vaciar-carrito'
     ])
 
     /**
@@ -93,7 +94,9 @@ import { computed } from 'vue';
                                 <p class="text-end">Total pagar: 
                                     <span class="fw-bold">{{totalPagar}}</span>
                                 </p>
-                                <button class="btn btn-dark w-100 mt-3 p-2">Vaciar Carrito</button>
+                                <button class="btn btn-dark w-100 mt-3 p-2"
+                                @click="$emit('vaciar-carrito')"
+                                >Vaciar Carrito</button>
                             </div>
                         </div>
                     </div>
