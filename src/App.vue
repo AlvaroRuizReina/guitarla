@@ -1,15 +1,25 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { db } from './data/guitarras.js'
 import Guitarra from './components/Guitarra.vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 
-
 // states de nuestra App con ref
 const guitarras = ref([])
 const guitarra = ref({})
 const carrito = ref([])
+
+/*
+* Watch for carrito state
+* Aplicar el inline handler guardarLocalStorage,
+* cuando se detecten cambios, en el state carrito de compras.
+*/
+watch(carrito, () => {
+    guardarLocalStorage()
+}, {
+    deep: true
+})
 
 // lifecycle hook onMounted
 onMounted(() => {
@@ -21,7 +31,7 @@ onMounted(() => {
 })
 
 /*
-* local storage callback funtion
+* local storage Inline Handler
 * Almacena de forma persistente los productos en el carrito de compra
 */
 const guardarLocalStorage = () => {
