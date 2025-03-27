@@ -31,6 +31,7 @@ import { computed } from 'vue';
         (producto.cantidad * producto.precio), 0)
     })
 </script>
+
 <template>
     <!-- HEADER -->
     <header class="py-5 header">
